@@ -13,7 +13,7 @@
 
 Route::get('/test', function(){
 
-    return App\Post::find(5)->tags;
+    return App\Profile::find(1)->user;
 
 });
 
