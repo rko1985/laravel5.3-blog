@@ -137,6 +137,21 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as' => 'tag.delete'
     ]);
 
+    Route::get('/users', [
+        'uses' => 'UsersController@index',
+        'as' => 'users'
+    ]);
+
+    Route::get('/user/create', [
+        'uses' => 'UsersController@create',
+        'as' => 'user.create'
+    ]);
+
+    Route::post('/user/store', [
+        'uses' => 'UsersController@store',
+        'as' => 'user.store'
+    ]);
+
 
 });
 
