@@ -14,6 +14,8 @@
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}">
 
+    @yield('styles')
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -125,5 +127,8 @@
             toastr.info("{{Session::get('info')}}")
         @endif
     </script>
+
+    @yield('scripts')
+
 </body>
 </html>
