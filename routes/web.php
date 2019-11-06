@@ -22,7 +22,7 @@ Route::get('/', [
     'as' => 'index'
 ]);
 
-Route::get('/{slug}', [
+Route::get('/post/{slug}', [
     'uses' => 'FrontEndController@singlePost',
     'as' => 'post.single'
 ]);
