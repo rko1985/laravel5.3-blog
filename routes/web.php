@@ -11,6 +11,17 @@
 |
 */
 
+Route::post('/subscribe', function(){
+
+    $email = request('email');
+
+    Newsletter::subscribe($email);
+
+    Session::flash('subscribed', 'Successfully subscribed.');
+    return redirect()->back();
+
+});
+
 Route::get('/test', function(){
 
     return App\Profile::find(1)->user;
